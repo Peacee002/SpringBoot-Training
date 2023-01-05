@@ -17,11 +17,11 @@ public class Controller {
 
     @GetMapping("/person")
     public List<Person> getAllPersons(){
-        //Returns hardcoded data, a real world application would return from the database
+
         List<Person> personList = new ArrayList<Person>();
         personList.add(new Person(1,"ahmet",44));
-        personList.add(new Person(2,"Donald Duck", 35));
-        personList.add(new Person(3,"Peppa Pig", 15));
+        personList.add(new Person(2,"ayşe", 35));
+        personList.add(new Person(3,"erdem", 15));
         return personList;
     }
 
@@ -30,14 +30,14 @@ public class Controller {
 
     @GetMapping("/person/{personId}")
     public Person getPersonWithId(@PathVariable Integer personId){
-        //Returns hardcoded data, a real world application would return from the database
+
         return new Person(3,"Peppa Pig", 15);
     }
 
 
     @PostMapping("/person/newperson")
     public void addPerson(@RequestBody Person person){
-        //Just has a Sysout stmt, a real world application would save this record to the database
+
         System.out.println("Saving person information");
     }
     @GetMapping("/person/Hello")
