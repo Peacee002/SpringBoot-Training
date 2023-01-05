@@ -41,7 +41,7 @@ public class Controller {
         System.out.println("Saving person information");
     }
     @GetMapping("/person/Hello")
-    public String HelloWorld(Person person){
+    public String HelloWorld(){
         String a = "helloworld";
         return a;
     }
